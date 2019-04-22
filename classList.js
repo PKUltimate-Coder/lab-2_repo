@@ -18,5 +18,8 @@ delete: function (index) {
 },
 ret: function(){
     return list;
+},
+find: function(student){
+    return list.findIndex(element => element === student);
 }
 }
