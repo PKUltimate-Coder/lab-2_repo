@@ -40,7 +40,6 @@ router.post('/api/create', function(req, res){
         res.json(req.body.student);
         console.log("creating the following Student:", req.body.student);
     }
-    //res.redirect(req.baseUrl + '/api/list');
 });
 
 router.post('/api/delete', function(req, res){
