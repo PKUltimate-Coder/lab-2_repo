@@ -4,8 +4,12 @@
   "description": "Package for using json npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PKUltimate-Coder/lab-2_repo.git"
   },
   "keywords": [
     "package",
@@ -16,5 +20,8 @@
   "dependencies": {
     "body-parser": "1.18.3",
     "express": "4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
   }
 }
