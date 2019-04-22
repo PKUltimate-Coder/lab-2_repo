@@ -1,0 +1,12 @@
+body {
+    background-color: goldenrod;
+    color : whitesmoke;
+    }
+    #addStud{
+        color : rebeccapurple;
+        padding: 3px;
+        background-color: aquamarine;
+    }
+    #edit{
+        color : #555;
+    }
