@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://elen4010-lab-2.scm.azurewebsites.net:443/elen4010-lab-2.git"
+    "url": "git+https://github.com/PKUltimate-Coder/lab-2_repo.git"
   },
   "keywords": [
     "package",
