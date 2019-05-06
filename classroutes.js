@@ -44,7 +44,7 @@ router.post('/api/create', function(req, res){
 
 router.post('/api/delete', function(req, res){
     
-    let num = classList.findIndex(element => element === req.body.student);
+    let num = classList.find(req.body.student);
     if (num === -1) {
         console.log("Name not found");
     }else
@@ -57,7 +57,7 @@ router.post('/api/delete', function(req, res){
     });
 router.post('/api/edit', function(req, res){
     
-    let num = classList.findIndex(element=> element === req.body.student);
+    let num = classList.find(req.body.student);
     
     if (num === -1) {
         console.log("Name not found");
