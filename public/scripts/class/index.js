@@ -11,9 +11,8 @@ button1.addEventListener('click', function (){
     
     fetch('/class/api/create', {
         method : 'POST',
-        body: JSON.stringify({student: newName}),
-        headers:  {"Content-Type" : "application/json"}
-        //body:JSON.stringify({student : newName})
+        headers:  {"Content-Type" : "application/json"},
+        body: JSON.stringify({student: newName})
     })
     .then(function(response){
         if (response.ok)
@@ -61,11 +60,13 @@ button1.addEventListener('click', function (){
 
 button2.addEventListener("click", function () {
     let delName = document.getElementById("delStudent").value;
-    fetch("/class/api/delete", {
-        method : "POST",
-        body : JSON.stringify({student: delName}),
-        headers: {"Content-Type" : "application/json"}
-    }).then(res => res.json())
+    let student = {student : delName};
+    fetch('/class/api/delete', {
+        method : 'POST',
+        headers: {"Content-Type" : "application/json"},
+        body : JSON.stringify(student)
+    })
+    .then(res => res.json())
     .catch(e => alert(e))
 
     fetch('/class/api/list') // Returns a Promise for the GET request
@@ -107,11 +108,12 @@ button3.addEventListener("click", () => {
     let oldName = document.getElementById("editStudent").value;
     let newName = document.getElementById("newVal").value;
 
-    fetch("/class/api/edit", { 
+    fetch('/class/api/edit', { 
     method : 'POST',
-    body: JSON.stringify({student : oldName, newVal : newName}),
-    headers: {"Content-Type":"application/json"}
-}).then(res => res.json())
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({student : oldName, newVal : newName})
+})
+    .then(res => res.json())
     .catch(e => alert(e))
 
 
