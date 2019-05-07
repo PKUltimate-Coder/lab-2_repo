@@ -11,7 +11,7 @@ let classRouter = require("./classRoutes");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //mounting our routers
-app.use("/class", classRouter);
+app.use("/", classRouter);
 
 app.use('/cdn', express.static('public'));
 

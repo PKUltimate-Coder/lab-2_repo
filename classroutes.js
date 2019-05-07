@@ -10,17 +10,7 @@ router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views', 'class', 'index.html'));
     });
 
-router.get('/create', function(req, res){
-    res.sendFile(path.join(__dirname, 'views', 'class', 'create.html'));
-    });
 
-router.get('/delete', function(req, res){
-    res.sendFile(path.join(__dirname, 'views', 'class', 'delete.html'));
-    });
-
-router.get('/edit', function(req, res){
-    res.sendFile(path.join(__dirname, 'views', 'class', 'edit.html'));
-});
 
 router.get('/api/list', function (req, res) {
     res.json(classList.ret()); //Respond with JSON
